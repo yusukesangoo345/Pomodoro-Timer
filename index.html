@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pomodoro Timer</h1>
+        <div class="timer">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <div class="progress-bar">
+            <div id="progress"></div>
+        </div>
+        <div class="buttons">
+            <button id="startBtn">Start</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+        <p id="status">Ready to work?</p>
+        <p>Cycles Completed: <span id="cycles">0</span></p>
+        <div class="settings">
+            <label for="workDuration">Work: </label>
+            <input type="number" id="workDuration" value="25" min="1" max="60"> minutes
+            <label for="breakDuration">Break: </label>
+            <input type="number" id="breakDuration" value="5" min="1" max="30"> minutes
+        </div>
+    </div>
+    <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
